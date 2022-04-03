@@ -1,3 +1,4 @@
+---
 name: Test url shorter
 on: [pull_request]
 jobs:
