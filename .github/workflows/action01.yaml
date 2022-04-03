@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: if egrep -R '^[pP]assword|[pP]asswd|[kK]ey' *; then false; else true; fi
+      - run: if egrep -R '^[pP]assword[pP]ass|[pP]asswd|[kK]ey' *; then false; else true; fi
       - run: if grep -RP '(?<![A-Z0-9])[A-Z0-9]{20}(?![A-Z0-9])' *; then false; else true; fi
       - run: if grep -RP '(?<![A-Za-z0-9/+=])[A-Za-z0-9/+=]{40}(?![A-Za-z0-9/+=])' *; then false; else true; fi
       - run: echo "Todo ok!"
