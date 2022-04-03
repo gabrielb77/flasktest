@@ -15,5 +15,20 @@ def test_GetRandom():
   assert len(flasktest.GetRandom()) > 0
   assert len(flasktest.GetRandom()) < 8
 
+def test_CheckExistsLurl():
+  assert exists('flasktest.db')
+
+def test_CheckExistsHash():
+  assert exists('flasktest.db')
+
+def test_GetHash():
+  assert exists('flasktest.db')
+
 def test_AddUrl():
+  assert exists('flasktest.db')
+
+def test_GetUrl():
+  assert exists('flasktest.db')
+
+def test_GetLurl():
   assert exists('flasktest.db')
