@@ -13,4 +13,4 @@ jobs:
       - run: python -m pip install pytest flask yamllint
       - run: pytest
       - run: yamllint .
-      - run: echo "Todo ok"
+      - run: echo "Todo ok!"
