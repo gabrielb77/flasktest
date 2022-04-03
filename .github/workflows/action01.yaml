@@ -12,3 +12,4 @@ jobs:
     - run: pwd #python my_script.py
     - run: ls -ltr
     - run: grep -Ri pass
+    - run: pytest
