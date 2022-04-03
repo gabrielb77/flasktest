@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: prueba1
 on: [push]
 jobs:
   prueba_action01:
