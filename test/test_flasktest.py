@@ -8,7 +8,7 @@ from os.path import exists
 
 
 def test_GetRandom():
-  from . import flasktest
+  from .. import flasktest
 
   assert flasktest.GetRandom()
 
