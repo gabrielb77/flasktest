@@ -8,7 +8,7 @@ from os.path import exists
 
 
 def test_GetRandom():
-  from ...flasktest import flasktest
+  from .. import flasktest
 
   assert flasktest.GetRandom()
 
@@ -16,7 +16,7 @@ def test_GetRandom():
   assert len(flasktest.GetRandom()) <= 7
 
 def test_CheckExistsLurl():
-  import flasktest
+  from .. import flasktest
 
   assert exists('flasktest.db')
 
