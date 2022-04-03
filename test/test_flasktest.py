@@ -20,7 +20,7 @@ def test_CheckExistsLurl():
 
   assert exists('flasktest.db')
 
-  assert flasktest.CheckExistsLurl('http://noexisteurl.com',sqlite3.connect('test_flasktest.db'))
+#  assert flasktest.CheckExistsLurl('http://noexisteurl.com',sqlite3.connect('test_flasktest.db'))
 
 def test_CheckExistsHash():
   assert exists('flasktest.db')
