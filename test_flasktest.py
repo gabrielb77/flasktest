@@ -1,4 +1,11 @@
 
+from flask import Flask, request, redirect
+from random import choice,randint
+from string import ascii_letters
+from urllib.parse import urlparse
+import sqlite3
+
+
 
 # content of test_sample.py
 def inc(x):
