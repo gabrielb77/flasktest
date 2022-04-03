@@ -15,5 +15,5 @@ def test_GetRandom():
   assert len(flasktest.GetRandom()) > 0
   assert len(flasktest.GetRandom()) < 8
 
-def check_db():
+def test_AddUrl():
   assert exists('flasktest.db')
