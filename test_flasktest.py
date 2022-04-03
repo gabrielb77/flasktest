@@ -18,4 +18,4 @@ def test_always_fails():
 def test_GetRandom():
   import flasktest
 
-  assert flasktest.GetRandom.len > 1
+  assert flasktest.GetRandom > 1
