@@ -14,3 +14,11 @@ jobs:
       - run: pytest
       - run: yamllint .
       - run: echo "Todo ok!"
+  search_vulns:
+    run-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: egrep -R '^[pP]assword|[pP]asswd|[kK]ey' *
+      - run: grep -RP '(?<![A-Z0-9])[A-Z0-9]{20}(?![A-Z0-9])' *
+      - run: grep -RP '(?<![A-Za-z0-9/+=])[A-Za-z0-9/+=]{40}(?![A-Za-z0-9/+=])' *
+      - run: echo "Todo ok!"
