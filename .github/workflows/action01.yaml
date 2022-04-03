@@ -1,7 +1,7 @@
-name: learn-github-actions
-on: [push]
+name: Test url shorter
+on: [push,pull_request]
 jobs:
-  prueba_action01:
+  run_tests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -9,7 +9,5 @@ jobs:
       with:
         python-version: '3.9.2' # Version range or exact version of a Python version to use, using SemVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-    - run: pwd #python my_script.py
-    - run: ls -ltr
-    - run: grep -Ri pass
+    - run: python -m pip install pytest flask
     - run: pytest
