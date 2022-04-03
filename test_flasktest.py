@@ -25,4 +25,7 @@ def test_always_fails():
 def test_GetRandom():
   import flasktest
 
-  assert flasktest.GetRandom > 1
+  assert flasktest.GetRandom()
+
+  assert len(flasktest.GetRandom()) > 0
+  assert len(flasktest.GetRandom()) < 8
