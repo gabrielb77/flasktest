@@ -12,11 +12,15 @@ def test_GetRandom():
 
   assert flasktest.GetRandom()
 
-  assert len(flasktest.GetRandom()) > 0
-  assert len(flasktest.GetRandom()) < 8
+  assert len(flasktest.GetRandom()) >= 1
+  assert len(flasktest.GetRandom()) <= 7
 
 def test_CheckExistsLurl():
+  import flasktest
+
   assert exists('flasktest.db')
+
+  assert flasktest.CheckExistsLurl('http://noexisteurl.com',sqlite3.connect('test_flasktest.db'))
 
 def test_CheckExistsHash():
   assert exists('flasktest.db')
