@@ -6,6 +6,8 @@ from string import ascii_letters
 from urllib.parse import urlparse
 import sqlite3
 
+#Test actions
+
 def GetRandom():
   RandomInt = randint(1,7)
   return ''.join(choice(ascii_letters) for i in range(RandomInt))
