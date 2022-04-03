@@ -15,7 +15,7 @@ jobs:
       - run: yamllint .
       - run: echo "Todo ok!"
   search_vulns:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - run: egrep -R '^[pP]assword|[pP]asswd|[kK]ey' *
